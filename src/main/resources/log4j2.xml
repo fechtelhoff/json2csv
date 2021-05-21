@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Configuration>
+<Configuration>
+
+	<Appenders>
+		<Console name="STDOUT"
+		         target="SYSTEM_OUT">
+			<PatternLayout pattern="%-5p %d - %m%n" />
+		</Console>
+	</Appenders>
+
+	<Loggers>
+		<Root level="DEBUG">
+			<AppenderRef ref="STDOUT" />
+		</Root>
+		<Logger name="org.iqtig.od"
+		        level="DEBUG"
+		        additivity="FALSE">
+			<AppenderRef ref="STDOUT" />
+		</Logger>
+	</Loggers>
+
+</Configuration>
